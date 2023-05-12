@@ -1,6 +1,7 @@
 """ scrivo in input una frase, ceare un dizionario che conta le parole in una frase """
 
 frase = input('inserisci una frase: ')
+frase = frase.lower()
 
 simboli = [',',';','.',':','?','!']
 for lett in frase:
