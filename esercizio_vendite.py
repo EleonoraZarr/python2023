@@ -14,14 +14,18 @@ while flag_vendita:
         quantita_venduta = int(input('Inserire quantità vendute: '))
 
         if nome not in diz_vendite:
-            diz_vendite[nome]= [prezzo, quantita_venduta]
+            fatturato = prezzo*quantita_venduta
+            diz_vendite[nome]= [prezzo, quantita_venduta, fatturato]
         else: 
             diz_vendite[nome][0] = prezzo             #aggiorno il prezzo
             diz_vendite[nome][1] += quantita_venduta    # sommo le quantità
+            diz_vendite[nome][2] += quantita_venduta*prezzo 
+    elif scelta == '0':
+        flag_vendita = False 
     else:
-        flag_vendita = False        
+        print('ERRORE!')           
 print(diz_vendite)        
 
 # visualizzare il totale delle vendite per ogni prodotto
 for chiave in diz_vendite.keys():
-    print('Sono state vendute ',  diz_vendite[chiave][1],' quantità del prodotto ', chiave)
+    print('Sono state vendute ',  diz_vendite[chiave][1],' quantità del prodotto ', chiave, 'con fatturato: ',diz_vendite[chiave][2])
