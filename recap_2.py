@@ -2,8 +2,13 @@
 
 frase = input('inserisci una frase: ')
 
-lista = frase.split(' ')
-print(lista)
+simboli = [',',';','.',':','?','!']
+for lett in frase:
+    if lett in simboli:
+        frase = frase.replace(lett,'')      #cancello i simboli
+
+lista = frase.split(' ')                    # trasformo la stringa in una lista
+
 
 dizionario = {} 
 
