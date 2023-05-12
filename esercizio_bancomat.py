@@ -1,5 +1,4 @@
-#Esercizio Bancomat, by Manuel Murtas & co.
- 
+
 u1_pin = '1234'
 u1_iban = 'abcd'
 
