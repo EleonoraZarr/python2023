@@ -7,8 +7,8 @@ print(lista)
 
 dizionario = {} 
 
-for parola in lista:                      #scorro le lettere della parola
-    if parola not in dizionario:          # se la lettera non è nel dizionario
+for parola in lista:                      #scorro le parole della frase
+    if parola not in dizionario:          # se la parola non è nel dizionario
         dizionario[parola]=1              # la aggiungo con valore 1
     else:
         dizionario[parola] += 1             # altrimenti aumento il valore
